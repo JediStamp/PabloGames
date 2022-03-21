@@ -1,0 +1,218 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(233, 231, 231, 0.664);
+    /* background-color: rgba(0, 0, 0, 0.863); */
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(233, 231, 231, 0.664);
+    /* background-color: rgba(0, 0, 0, 0.863); */
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.center {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+#searchbar {
+    width: 300px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0px 40px 0px 10px;
+    font-size: 18px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.searchBtn {
+    border: none;
+    background-color: rgba(37, 47, 197, 0.664);
+    height: 50px;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.accountBtn {
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(37, 47, 197, 0.664);
+    height: 50px;
+    width: 50px;
+}
+
+.btnText {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.shoppingBtn {
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(37, 47, 197, 0.664);
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.navSearchBar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menuBar {
+    background-color: rgba(233, 231, 231, 0.664);
+    /* background-color: rgba(0, 0, 0, 0.863); */
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.menuBar button {
+    width: 24.5%;
+    background-color: rgba(37, 47, 197, 0.664); /* Green background */
+    border: none; /* Green border */
+    border-radius: 12px;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    font-size: large;
+    margin-left: 6px;
+    height: 50px;
+}
+
+.menuBar button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.menuBar:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menuBar button:hover {
+    background-color: #818181;
+    color: black;
+}
+/* Slideshow container */
+.slideshow {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    width: auto;
+    padding: 16px;
+    margin-top: -150px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+/* Content of the page */
+.beforeWord::before {
+    content: "Take";
+    font-size: 150%;
+    font-weight: 900;
+}
+.beforeWord {
+    font-size: 110%;
+    padding-left: 125px;
+
+}
+
+.vl {
+    border-left: 6px solid rgba(37, 47, 197, 0.664);
+    height: 240px;
+}
+
+.title {
+    text-align: center;
+}
+
+.line {
+    background-color: rgba(37, 47, 197, 0.664);
+    width: 30%;
+    height: 2px;
+}
+
+.information {
+    /* margin-left: 350px; */
+    /* background-color: aquamarine; */
+    position: relative;
+    margin: auto;
+        margin-top: 50px;
+}
+
+.tableBtn {
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(37, 47, 197, 0.664);
+    height: 50px;
+    width: 200px;
+    align-self: center;
+    margin: auto;
+    display: block;
+}
+.tableBtn:hover {
+    background-color: #818181;
+    box-shadow: 0px 15px 20px rgba(37, 47, 197, 0.664);
+    transform: translateY(-4px);
+}

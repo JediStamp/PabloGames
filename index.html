@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Solitaire Game</title>
+        <script src="https://kit.fontawesome.com/b31799f5a9.js" crossorigin="anonymous"></script> <!-- This is my kit of icons -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <a href="Homepage.html"><img class="center" src="./logo/logos_transparent.png" width="200" height="200"></a>
+                </div>
+                <div class="navSearchBar">
+                    <input type="text" id="searchbar" onkeyup="search()" placeholder="Search Our Products..." class="large">
+                    <button class="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="usrAccount">
+                    <button class="accountBtn"><i class="fas fa-user"></i></button>
+                </div>
+                <div class="btnText">
+                    <p>Sign in / Register</p>
+                </div>
+                <div class="cart">
+                    <button class="shoppingBtn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <div class="menuBar">
+                <button class="productBtn"> OUR PRODUCTS </button>
+                <button class="teamBtn"> TEAM </button>
+                <button class="careerBtn"> CAREERS </button>
+                <button class="contactBtn"> SUPPORT </button>
+            </div>
+        </header>
+        <div class="title">
+            <h1>SOLITAIRE</h1>
+            <hr class="line">
+        </div>
+        <div class="slideshow">
+            <div class="mySlides fade">
+                <img src="pictures/Solitaire.JPG" width="500" height="300">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="pictures/Solitaire_2.JPG" width="500" height="300">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="pictures/Solitaire_3.JPG" width="500" height="300">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <table class="information">
+            <tr>
+                <td>
+                    <img class="gameIcon" src="pictures/SolitaireLogo.png" width="300" height="240">
+                </td>
+                <td valign="top">
+                    <div class="vl"></div>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                    <p>Developed by our very own development team 3. <br> 
+                        Our game offers two play modes: <br>
+                        <ul>
+                            <li>Vegas Rules</li>
+                            <li>Standard Solitaire</li>
+                        </ul>
+                        Although this game is currently still in development, <br>
+                        you can download your own copy of the game to test it <br>
+                        out and provide our team with any feedback. </p>
+                    <!-- <button class="downloadBtn">DOWNLOAD NOW</button>
+                    <button class="downloadBtn">FEEDBACK</button> -->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6"><button class="tableBtn">DOWNLOAD NOW</button></td>
+            </tr>
+            <tr>
+                <td colspan="6"><button class="tableBtn" 
+                    onclick="window.location.href='https://forms.gle/24aiHmAFvRfCjhBE8';">PROVIDE FEEDBACK</button></td>
+            </tr>
+        </table>
+        
+    </body>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+</html>
