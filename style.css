@@ -225,9 +225,9 @@ img {
   }
   
   .tblLink:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   .tblLink:active {
-    text-decoration: underline;
+    text-decoration: none;
   }
