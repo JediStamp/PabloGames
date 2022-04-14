@@ -115,28 +115,28 @@ article {
 
 .solitaire {
     grid-area: sol;
-    background: url("./pictures/s01.png") center center;
+    background: url("../pictures/s01.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 .downloads {
     grid-area: dwn;
-    background: url("./pictures/c01.png") center center;
+    background: url("../pictures/c01.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 .feedback {
     grid-area: fdb;
-    background: url("./pictures/h01.png") center center;
+    background: url("../pictures/h01.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 .team {
     grid-area: tem;
-    background: url("./pictures/d01.png") center center;
+    background: url("../pictures/d01.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
@@ -144,7 +144,7 @@ article {
 /* SOLITAIRE PAGE */
 .sol-card {
     grid-area: lft;
-    background: url("./pictures/s01a.png") center center;
+    background: url("../pictures/s01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
@@ -156,42 +156,42 @@ article {
     padding: 10px;
     display: grid; /* Putting a mini grid inside this */
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
 }
 
-#top {
+ /* SOLITAIRE AND DOWNLOADS PAGES */
+.top {
     display: block;
     grid-column: 1 / span 2;
     grid-row: 1;
     /* border: 1px solid black; */
 }
 
-#left {
+.left {
     grid-column: 1;
     grid-row: 2;
     /* border: 1px solid black; */
     height: 100%;
 }
 
-#right {
+.right {
     grid-column: 2;
     grid-row: 2;
     /* border: 1px solid black; */
     height: 100%;
 }
 
-#top > h2 {
+.top > h2 {
     text-align: center;
 }
 
-#top a:link, #top a:visited, #top a:hover, #top a:active {
+.top a:link, .top a:visited, .top a:hover, .top a:active {
     color: #abdbec;
 }
 
 /* DOWNLOADS PAGE */
 .dwn-card {
     grid-area: lft;
-    background: url("./pictures/c01a.png") center center;
+    background: url("../pictures/c01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
@@ -202,16 +202,19 @@ article {
     background-color: #38a3a5;
     color: white;
     padding: 10px;
+    display: grid; /* Putting a mini grid inside this */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
 }
 
-.dwn-expanded > h2 {
+/* .dwn-expanded > h2 {
     text-align: center;
-}
+} */
 
 /* FEEDBACK PAGE */
 .fbk-card {
     grid-area: lft;
-    background: url("./pictures/h01a.png") center center;
+    background: url("../pictures/h01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
@@ -232,28 +235,28 @@ article {
 
 #ari {
     grid-area: sol;
-    background: url("./pictures/s01a.png") center center;
+    background: url("../pictures/s01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 #cam {
     grid-area: dwn;
-    background: url("./pictures/c01a.png") center center;
+    background: url("../pictures/c01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 #jenne {
     grid-area: fdb;
-    background: url("./pictures/h01a.png") center center;
+    background: url("../pictures/h01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
 
 #owen {
     grid-area: tem;
-    background: url("./pictures/d01a.png") center center;
+    background: url("../pictures/d01a.png") center center;
     background-size: auto 80%;
     background-repeat: no-repeat;
 }
