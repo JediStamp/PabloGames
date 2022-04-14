@@ -1,242 +1,288 @@
-html, body {
+html {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: rgba(233, 231, 231, 0.664);
-    /* background-color: rgba(0, 0, 0, 0.863); */
-    background-blend-mode: multiply;
-    background-size: cover;
+    font-family: 'Nunito', sans-serif;
 }
 
-.mySlides {
-    display: none;
+.grid-container-main {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, auto);
+    grid-template-areas: 
+    'lg1 lg1 ttl ttl ttl ttl ttl ttl ttl ttl lg2 lg2  '
+    'nv1 nv1 nv1 nv2 nv2 nv2 nv3 nv3 nv3 nv4 nv4 nv4'
+    'sol sol sol dwn dwn dwn fdb fdb fdb tem tem tem';
+    column-gap: 5px;
+    row-gap: 5px;
+    background-color: black;
 }
 
-img {
-    vertical-align: middle;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, auto);
+    grid-template-areas: 
+    'lg1 lg1 ttl ttl ttl ttl ttl ttl ttl ttl lg2 lg2  '
+    'nv1 nv1 nv1 nv2 nv2 nv2 nv3 nv3 nv3 nv4 nv4 nv4'
+    'lft lft lft mid mid mid mid mid mid .   .   .  ';
+    column-gap: 5px;
+    row-gap: 5px;
+    background-color: black;
 }
-.header {
+
+.grid-container-team {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, auto);
+    grid-template-areas: 
+    'lg1 lg1 ttl ttl ttl ttl ttl ttl ttl ttl lg2 lg2  '
+    'nv1 nv1 nv1 nv2 nv2 nv2 nv3 nv3 nv3 nv4 nv4 nv4'
+    'sol sol sol dwn dwn dwn fdb fdb fdb tem tem tem'
+    'gen gen gen gen gen gen gen gen gen gen gen gen';
+    column-gap: 5px;
+    row-gap: 5px;
+    background-color: black;
+}
+
+/* HEADER ELEMENTS */
+.logo {
+    grid-area: lg1;
+} 
+
+.logo2 {
+    grid-area: lg2;
+} 
+
+header {
+    grid-area: ttl;
+    color: #abdbec;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(233, 231, 231, 0.664);
-    /* background-color: rgba(0, 0, 0, 0.863); */
-    background-blend-mode: multiply;
-    background-size: cover;
 }
 
-.center {
-    display: block;
-    margin-left: 0px;
-    margin-right: auto;
+h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 72px;
 }
 
-#searchbar {
-    width: 300px;
-    border: none;
-    height: 50px;
-    border-radius: 5px;
-    padding: 0px 40px 0px 10px;
-    font-size: 18px;
-    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+/* NAV BAR ELEMENTS */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Open Sans', sans-serif;
 }
 
-.searchBtn {
-    border: none;
-    background-color: rgba(37, 47, 197, 0.664);
-    height: 50px;
-    border-radius: 5px;
-    width: 50px;
+.nv1 {
+    grid-area: nv1;
+    background-color: #145153;
 }
 
-.accountBtn {
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(37, 47, 197, 0.664);
-    height: 50px;
-    width: 50px;
+.nv2 {
+    grid-area: nv2;
+    background-color: #38a3a5;
+}
+.nv3 {
+    grid-area: nv3;
+    background-color: #3af1f9;
+}
+.nv4 {
+    grid-area: nv4;
+    background-color: #abdbec;
 }
 
-.btnText {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.shoppingBtn {
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(37, 47, 197, 0.664);
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
-}
-.navSearchBar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.menuBar {
-    background-color: rgba(233, 231, 231, 0.664);
-    /* background-color: rgba(0, 0, 0, 0.863); */
-    background-blend-mode: multiply;
-    background-size: cover;
-}
-
-.menuBar button {
-    width: 24.5%;
-    background-color: rgba(37, 47, 197, 0.664); /* Green background */
-    border: none; /* Green border */
-    border-radius: 12px;
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-    font-size: large;
-    margin-left: 6px;
-    height: 50px;
-}
-
-.menuBar button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-.menuBar:after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.menuBar button:hover {
-    background-color: #818181;
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
     color: black;
 }
-/* Slideshow container */
-.slideshow {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-}
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 90%;
-    width: auto;
-    padding: 16px;
-    margin-top: -150px;
+.nv1 a:link, .nv1 a:visited, .nv1 a:hover, .nv1 a:active  {
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.nv2 a:link, .nv2 a:visited, .nv2 a:hover, .nv2 a:active  {
+    color: white;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+/* MAIN ELEMENTS */
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
 }
 
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.solitaire {
+    grid-area: sol;
+    background: url("./pictures/s01.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+.downloads {
+    grid-area: dwn;
+    background: url("./pictures/c01.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+.feedback {
+    grid-area: fdb;
+    background: url("./pictures/h01.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+.team {
+    grid-area: tem;
+    background: url("./pictures/d01.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-/* Content of the page */
-.beforeWord::before {
-    content: "Take";
-    font-size: 150%;
-    font-weight: 900;
-}
-.beforeWord {
-    font-size: 110%;
-    padding-left: 125px;
-
+/* SOLITAIRE PAGE */
+.sol-card {
+    grid-area: lft;
+    background: url("./pictures/s01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-.vl {
-    border-left: 6px solid rgba(37, 47, 197, 0.664);
-    height: 240px;
+.sol-expanded {
+    grid-area: mid;
+    background-color: #145153;
+    color: white;
+    padding: 10px;
+    display: grid; /* Putting a mini grid inside this */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
 }
 
-.title {
+#top {
+    display: block;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    /* border: 1px solid black; */
+}
+
+#left {
+    grid-column: 1;
+    grid-row: 2;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+#right {
+    grid-column: 2;
+    grid-row: 2;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+#top > h2 {
     text-align: center;
 }
 
-.line {
-    background-color: rgba(37, 47, 197, 0.664);
-    width: 30%;
-    height: 2px;
+#top a:link, #top a:visited, #top a:hover, #top a:active {
+    color: #abdbec;
 }
 
-.information {
-    position: relative;
-    margin: auto;
-    margin-top: 50px;
+/* DOWNLOADS PAGE */
+.dwn-card {
+    grid-area: lft;
+    background: url("./pictures/c01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-.tableBtn {
-    border-radius: 12px;
-    border: none;
-    background-color: rgba(37, 47, 197, 0.664);
-    height: 50px;
-    width: 200px;
-    align-self: center;
-    margin: auto;
+.dwn-expanded {
+    display:block;
+    grid-area: mid;
+    background-color: #38a3a5;
+    color: white;
+    padding: 10px;
+}
+
+.dwn-expanded > h2 {
+    text-align: center;
+}
+
+/* FEEDBACK PAGE */
+.fbk-card {
+    grid-area: lft;
+    background: url("./pictures/h01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+}
+
+.fbk-expanded {
+    grid-area: mid;
+    background-color: #3af1f9;
+    color: white;
+}
+
+/* TEAM PAGE */
+.gen {
+    grid-area: gen;
     display: block;
+    background-color: #abdbec;
+    padding: 10px;
 }
 
-.tableBtn:hover {
-    background-color: #818181;
-    box-shadow: 0px 15px 20px rgba(37, 47, 197, 0.664);
-    transform: translateY(-4px);
+#ari {
+    grid-area: sol;
+    background: url("./pictures/s01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-.tblLink:link {
-    text-decoration: none;
-    color: white;
-}
-  
-.tblLink:visited {
-    text-decoration: none;
-    color: white;
-}
-  
-.tblLink:hover {
-    text-decoration: none;
-    color: white;
-}
-  
-.tblLink:active {
-    text-decoration: none;
-    color: white;
+#cam {
+    grid-area: dwn;
+    background: url("./pictures/c01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
 }
 
-th, td {
-    padding: 5px;
+#jenne {
+    grid-area: fdb;
+    background: url("./pictures/h01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+}
+
+#owen {
+    grid-area: tem;
+    background: url("./pictures/d01a.png") center center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+}
+
+.gen > h2 {
+    text-align: center;
+}
+
+#ari a:link, #ari a:visited, #ari a:hover, #ari a:active {
+    color: #145153;
+}
+
+#cam a:link, #cam a:visited, #cam a:hover, #cam a:active {
+    color: #145153;
+}
+
+#jenne a:link, #jenne a:visited, #jenne a:hover, #jenne a:active {
+    color: #145153;
+}
+
+#owen a:link, #owen a:visited, #owen a:hover, #owen a:active {
+    color: #145153;
+}
+
+/* FOOTER ELEMENTS */
+footer {
+    grid-area: ftr;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
